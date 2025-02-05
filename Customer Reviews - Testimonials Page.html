@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sikh Details - Customer Reviews</title>
+    <link rel='icon' type='image/png' href='https://i.postimg.cc/8PwhW0sx/Sikh-Details-Company-Logo.png'>
+    <style>
+        body {  /* start of CSS code */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: ghostwhite;
+            color: darkgrey;
+        }
+        footer {
+            background-color: #008080;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            border-radius: 0;
+        }
+        .dropbtn {
+            background-color: teal;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 0;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 0;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            border-radius: 0;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: lightblue;
+        }
+        .reviews-container {
+            background: ghostwhite;
+            width: 90%;
+            max-width: 875px;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 30px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 50px auto;
+        }
+        h1 {
+            color: darkslategray;
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: teal;
+            font-size: 35px;
+            font-family: "Playfair Display", serif;
+            margin-bottom: 20px;
+        }
+        .reviews-list {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: #ffffff;
+        }
+        .review-card {
+            padding: 10px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        .review-card:last-child {
+            border-bottom: none;
+        }
+        .review-card p {
+            margin: 5px 0 0;
+            font-size: 18px;
+            color: #444444;
+        }
+        .leave-review {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #444444;
+            font-size: 18px;
+        }
+        input, textarea, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: teal;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: lightblue;
+        }
+        textarea {
+            font-family: Arial, sans-serif;
+        }
+        .left-logo, .right-logo, .car-1, .car-2, .car-3, .car-4, .car-5, .car-6 {
+            width: 200px;
+            height: auto;
+            position: absolute;
+            z-index: 0;
+            padding: 10px;
+            background-color: rgba(0, 128, 255, 0.1);
+            box-shadow: 0px 4px 8px rgba(0, 128, 255, 0.5);
+            border-radius: 0;
+        }
+        .my-container {
+            color: teal;
+            font-size: 40px;
+            width: 250px;
+            height: 9px;
+            background-color: transparent;
+            position: relative;
+            top: 5px;
+            left: 190px;
+            display: flex;
+            font-family: "Playfair Display", serif;
+            font-weight: bold;
+        }
+        .car-1 { top: 110%; left: 2%; }
+        .car-2 { top: 68%; left: 2%; }
+        .car-3 { top: 25%; left: 2%; }
+        .car-4 { top: 110%; right: 2%; }
+        .car-5 { top: 62%; right: 2%; }
+        .car-6 { top: 25%; right: 2%; }
+
+        @media (max-width: 768px) {
+            .reviews-container {
+                padding: 30px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+            .left-logo, .right-logo, .car-1, .car-2, .car-3, .car-4, .car-5, .car-6 {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="my-container">Sikh Details</div>
+        <div class="dropdown">  <!-- start of HTML code -->
+            <button class="dropbtn">Learn More Here</button>
+            <div class="dropdown-content">
+                <a href="index.html">Home Page</a>
+                <a href="About Us.html">About Us</a>
+                <a href="Plans & Pricing.html">Plans & Pricing</a>
+                <a href="Scheduling.html">Scheduling</a>
+                <a href="Portfolio.html">Completed Projects</a>
+                <a href="Customer Reviews - Testimonials Page.html">Customer Reviews</a>
+                <a href="Contact Info Page.html">Contact Us</a>
+                <a href="Job Application.html">Work With Us</a>
+            </div>
+        </div>
+    </nav>
+    <img src="https://i.postimg.cc/QNY8Tgh0/Car-1.png" alt="Car1" class="car-1">
+    <img src="https://i.postimg.cc/7YCxMCLD/Car-2.png" alt="Car2" class="car-2">
+    <img src="https://i.postimg.cc/m20Tdbc9/Car-3.png" alt="Car3" class="car-3">
+    <img src="https://i.postimg.cc/CxkSXWDQ/Car-4.png" alt="Car4" class="car-4">
+    <img src="https://i.postimg.cc/g0pmWNHk/Car-5.png" alt="Car5" class="car-5">
+    <img src="https://i.postimg.cc/BvCsQHm5/Car-6.png" alt="Car6" class="car-6">
+    <div class="reviews-container">
+        <h1>Why Choose Us?</h1>
+        <h2>Let Our Customers Show You Why!</h2><br>
+        <div class="reviews-list">
+            <div class="review-card">
+                <p>Unbeatable for the work and price point. Well worth the drive to Kent - Audi is looking CLEAN. Super quick turnaround; I’ll be back in 6-8 months.</p>
+            </div>
+            <div class="review-card">
+                <p>Great price and great work! They scheduled me in for 2 cars with a day's notice and had them ready in a few hours.</p>
+            </div>
+            <div class="review-card">
+                <p>These guys are very detail-oriented and did a phenomenal job for both of our vehicles and are also reasonably priced! Will continue using their services going forward.</p>
+            </div>
+            <div class="review-card">
+                <p>11/10 Made the car look brand new and are very decently priced!! Highly recommend.</p>
+            </div>
+            <div class="review-card">
+                <p>Best in the business! 🔥🔥🔥</p>
+            </div>
+            <div class="review-card">
+                <p>11/10 Made the car look brand new and are very decently priced!! Highly recommend.</p>
+            </div>
+            <div class="review-card">
+                <p>Thanks bro for doing this amazing job @avxeet @simranjotttt 🔥❤️</p>
+            </div>
+            <div class="review-card">
+                <p>Very good job 👍</p>
+            </div>
+            <!-- more reviews could go here? -->
+        </div>
+        <div class="leave-review">
+            <h2>Want to Leave a Review?</h2>
+            <form>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="rating">Rating</label>
+                <select id="rating" name="rating" required>
+                    <option value="5">★★★★★ - Excellent</option>
+                    <option value="4">★★★★☆ - Very Good</option>
+                    <option value="3">★★★☆☆ - Average</option>
+                    <option value="2">★★☆☆☆ - Poor</option>
+                    <option value="1">★☆☆☆☆ - Terrible</option>
+                </select>
+
+                <label for="feedback">Any Feedback?</label>
+                <textarea id="feedback" name="feedback" rows="4" placeholder="Write your feedback here..."></textarea>
+                <button type="submit">Submit Review</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Sikh Details. All Rights Reserved.</p>
+        <p><i class="fab fa-instagram"></i> <span class="label">Instagram:</span> <a href="https://www.instagram.com/sikhdetails" target="_blank">@sikhdetails</a></p> <!-- Added social media link -->
+    </footer>
+</body>
+</html>
+
