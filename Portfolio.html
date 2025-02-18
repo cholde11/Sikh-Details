@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sikh Details - Portfolio</title>
+    <link rel='icon' type='image/png' href='https://i.postimg.cc/8PwhW0sx/Sikh-Details-Company-Logo.png'>
+    <link rel='icon' type='image/png' href='https://i.postimg.cc/8PwhW0sx/Sikh-Details-Company-Logo.png'>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: ghostwhite;
+            color: darkgrey;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.2;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: lightblue;
+        }
+        .my-container {
+            color: teal;
+            font-size: 40px;
+            width: 250px;
+            height: 9px;
+            background-color: transparent;
+            position: relative;
+            top: 5px;
+            left: 190px;
+            display: flex;
+            font-family: "Playfair Display", serif;
+            font-weight: bold;
+        }
+        footer {
+            font-size: 10px !important; /* Adjust footer text size */
+            background-color: #008080;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        h1 {
+            color: darkslategrey;
+            font-size: 45px;
+            text-align: center;
+            padding: 15px 30px;
+            border: 3px solid teal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px; /* Rounds corners */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .developers {
+            font-size: 16px;
+            color: white;
+            margin-top: 10px;
+            line-height: 1.0;
+        }
+        .title {
+            font-size: 45px;
+            color: teal;
+            text-align: left;
+            font-weight: bold;
+            font-family: "Times New Roman";
+        }
+        .slash {
+            font-size: 35px; /* Adjust this to make it bigger */
+            font-weight: bold; /* Optional: Make it bold */
+            color: teal; /* Optional: Change color */
+            margin: 0 5px;
+            vertical-align: middle;
+        }
+        nav {
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            padding: 20px;
+            color:#008080;
+            align-items: ;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            background-color: #E0E0E0;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .dropbtn::after {
+            content: " ▼";
+            font-size: 14px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropbtn {
+            background: none;
+            color: white;
+            padding: 0;
+            font-size: 22px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .dropdown:hover .dropbtn {
+            background: none;
+            color: white;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: whitesmoke;
+            min-width: 100px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 0;
+            top: calc(100% + 5px);
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            font-size: 18px;
+            z-index: 1000;
+            top: 100%;
+            left: 0;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            z-index: 1000;
+            top: 100%;
+            left: 0;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            z-index: 1000;
+            top: 100%;
+            left: 0;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: lightblue;
+            z-index: 1000;
+            top: 100%;
+            left: 0;
+        }
+
+        .slideshow-container {
+            max-width: 800px;
+            height: 450px; 
+            position: relative;
+            margin: 50px auto 100px auto;
+            box-shadow: 8px px 15px rgba(0, 0, 0, 0.4); 
+            border-radius: 15px; 
+
+            
+        }
+        .mySlides {
+            display: none;
+            position: relative;
+        }
+        .mySlides img {
+            width: 100%;
+            height: 510px;
+            object-fit: cover;
+            transition: 0.3s ease;
+            border-radius: 15px; 
+            width: 100%; 
+            box-shadow: 5px 4px 15px rgba(0, 0, 0, 0.3); 
+        }
+        .mySlides:hover img {
+            filter: brightness(50%);
+        }
+        .mySlides:hover .text {
+            opacity: 1;
+        }
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            text-align: center;
+        }
+         .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 40px;
+            padding: 10px;
+            margin-top: -20px;
+            color: light gray;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 50%;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .next {
+            right: -150px; 
+           
+        }
+        .prev {
+            left: -150px; 
+            
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(235, 235, 237);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home Page</a></li><span class="slash">/</span>
+                <li><a href="About Us.html">About Us</a></li><span class="slash">/</span>
+                <li><a href="Plans & Pricing.html">Plans & Pricing</a></li><span class="slash">/</span>
+                <!-- Dropdown for Scheduling -->
+                <li class="dropdown">
+                    <a href="Scheduling.html" class="dropbtn">Scheduling</a>
+                    <ul class="dropdown-content">
+                        <li><a href="Scheduling.html#pricing">Pricing</a></li>
+                        <li><a href="Scheduling.html#appointment">Schedule Today</a></li>
+                        <li><a href="Scheduling.html#calendar">Availability</a></li>
+                        <li><a href="Scheduling.html#contact">Contact<br>Info</a></li>
+                    </ul>
+                </li><span class="slash">/</span>
+                <li><a href="Portfolio.html">Completed Projects</a></li><span class="slash">/</span>
+                <li><a href="Customer Reviews - Testimonials Page.html">Customer Reviews</a></li><span class="slash">/</span>
+                <li><a href="Contact Info Page.html">Contact Us</a></li><span class="slash">/</span>
+                <li><a href="Job Application.html">We're Hiring!</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <br>
+    <h1>Auto Detailing Showcase</h1>
+
+    <!-- Slideshow container -->
+   
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="https://i.postimg.cc/mgFVScsH/Acura-MDX.png" alt="Acura-MDX">
+            <div class="text">Acura MDX Came in for Interior/Exterior Detail Package</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="https://i.postimg.cc/xdD5p0fF/BMW17.png" alt="BMW17">
+            <div class="text">BMW I7 in for a Full Interior/Exterior Detail</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="https://i.postimg.cc/cHVbQP9Q/corvetteenginebaypic.jpg" alt="CorvetteInteriorBay">
+            <div class="text">Corvette Engine Bay Freshly Cleaned and Detailed</div>
+        </div>
+         <div class="mySlides fade">
+            <img src="https://i.postimg.cc/Y9t3kbm6/cla-45.png" alt="cla 45">
+            <div class="text">Exterior Detail for Mercedes-Benz CLA 45</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="https://i.postimg.cc/LXvVsLzr/Mercedes-Benz-GLE.jpg" alt="Mercedes-Benz">
+            <div class="text">Full Exterior Detail on Mercedes-Benz GLE</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="https://i.postimg.cc/L5X3g5Dh/Porsche-Cavenne.png" alt="Porsche-Cavenne">
+            <div class="text">Porsche Cavenne with Full Exterior Detail</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="https://i.postimg.cc/1RCHh0RF/RamTRX.png" alt="Ram TRX">
+            <div class="text">RAM TRX with Full Exterior Detail</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="https://i.postimg.cc/mZYzfCYw/audipic.jpg" alt="Audi RS 7">
+            <div class="text">Audi RS 7 with Interior/Exterior Detail Package</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="https://i.postimg.cc/x8MFgghB/enginebaycleanpic.jpg" alt="EngineBayDetail">
+            <div class="text">Engine Bay Detail for Audi Sedan</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="https://i.postimg.cc/y8dkZGwQ/audipic1.jpg" alt="Audi RS 7">
+            <div class="text">Audi RS 7 Getting a Thorough Wash</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="https://i.postimg.cc/q76qm3B2/bmwpic.jpg" alt="BMWX5">
+            <div class="text">BMW X5 SUV with Exterior Detail Package</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="https://i.postimg.cc/Hs1NjD7m/interiorcarpicc.jpg" alt="AudiSedan">
+            <div class="text">Interior Detail for Audi Sedan</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="https://i.postimg.cc/wMgBT4Xk/IMG-7860.jpg" alt="LamboUrus">
+            <div class="text">Ceramic Coating for Lamborghini Urus</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="https://i.postimg.cc/C57xZCJp/rampic.jpg" alt="Ram TRX">
+            <div class="text">RAM 1500 TRX with Ceramic Coating</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <footer>
+        <p class="p3">&copy; 2025 Sikh Details. All Rights Reserved.</p>
+        <p class="p3"><i class="fab fa-instagram"></i> <span class="label">Contact Us Here:</span> <a href="https://www.instagram.com/sikhdetails" target="_blank">@sikhdetails</a></p>
+        <p class="developers">
+            <i class="fab fa-linkedin"></i> <span class="white">Developers:</span> 
+            <a href="https://www.linkedin.com/in/colin-holdeman-0088692a3/" target="_blank">Colin Holdeman</a> | 
+            <a href="https://www.linkedin.com/in/amanda-dibble-939450332/" target="_blank">Amanda Dibble</a> |
+            <a href="https://www.linkedin.com/in/armaan-singh-52378a27a/" target="_blank">Armaan Singh</a> | 
+            <a href="https://www.linkedin.com/in/leilani-knox-131911345/" target="_blank">Leilani Knox</a>
+        </p>
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+    </script>
+</body>
+</html>
